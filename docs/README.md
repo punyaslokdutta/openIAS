@@ -14,6 +14,7 @@ Use this folder as the source of truth for the openIAS product and system model.
 | [04-sense-signals.md](04-sense-signals.md) | Evidence event taxonomy and signal lifecycle |
 | [05-product-roadmap.md](05-product-roadmap.md) | Phased CTO roadmap from graph to pilots |
 | [06-graph-visualization-spec.md](06-graph-visualization-spec.md) | Visualization lenses, layout, tooltips, and export contract |
+| [07-civil-services-agent-workspace.md](07-civil-services-agent-workspace.md) | Slack-style civil-services agent workspace interface spec |
 
 ## Supporting Docs
 

@@ -48,6 +48,14 @@ DPR estimate
 
 PaperTrail's job is to reconcile those two paths. Paper says X, money moved Y, ground reality shows Z. The mismatch is the product.
 
+## Workspace Interface
+
+![PaperTrail civil-services agent workspace mockup](docs/assets/papertrail-workspace-mockup.png)
+
+PaperTrail should feel like a civil-services command room built inside a Slack-style workspace. A bridge case becomes a shared thread, agents take roles, tickets track unresolved work, evidence chips show the source trail, and the workshop panel shows what every agent is doing.
+
+In the bridge example, the Collector Agent creates `PTL-384`, the Works Agent checks DPR, tender, running account bills, Measurement Book, and quality evidence, the Finance Agent reconciles sanction and payment records, the Data Steward Agent flags missing IDs, and the Audit Agent prepares a source-linked review note. Humans approve any external action.
+
 ## North Star
 
 Every public rupee should have an inspectable trail:
@@ -86,10 +94,12 @@ The 2026 product thesis:
 |   |-- 04-sense-signals.md
 |   |-- 05-product-roadmap.md
 |   |-- 06-graph-visualization-spec.md
+|   |-- 07-civil-services-agent-workspace.md
 |   |-- adr/
 |   |   `-- 0001-docs-first-accountability-stack.md
 |   |-- assets/
-|   |   `-- india-public-money-flow.png
+|   |   |-- india-public-money-flow.png
+|   |   `-- papertrail-workspace-mockup.png
 |   `-- references/
 |       `-- official-anchors.md
 |-- data/
@@ -98,6 +108,7 @@ The 2026 product thesis:
 |       |-- nodes.json
 |       `-- signals.json
 `-- prompts/
+    |-- civil-services-workspace-super-prompt.md
     `-- money-flow-visualization-super-prompt.md
 ```
 
@@ -109,6 +120,7 @@ The 2026 product thesis:
 4. Read [docs/02-accountability-model.md](docs/02-accountability-model.md) for responsibility, custody, discretion, and oversight.
 5. Read [docs/03-agent-workspace-architecture.md](docs/03-agent-workspace-architecture.md) for the agent system design.
 6. Read [docs/04-sense-signals.md](docs/04-sense-signals.md) for the evidence and mismatch taxonomy.
+7. Read [docs/07-civil-services-agent-workspace.md](docs/07-civil-services-agent-workspace.md) for the Slack-style interface spec.
 
 ## What This Is
 
