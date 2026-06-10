@@ -1,0 +1,307 @@
+{
+  "version": "0.1.0",
+  "last_reviewed": "2026-06-10",
+  "nodes": [
+    {
+      "id": "gov_parliament_lok_sabha",
+      "label": "Parliament",
+      "class": "government_body",
+      "layer": "decision_allocation_oversight",
+      "description": "Authorizes budget and exercises legislative oversight."
+    },
+    {
+      "id": "gov_mof_budget_division",
+      "label": "Ministry of Finance - Budget Division",
+      "class": "government_body",
+      "layer": "decision_allocation_oversight",
+      "description": "Coordinates Union budget allocation framework."
+    },
+    {
+      "id": "gov_mof_doe",
+      "label": "Ministry of Finance - Department of Expenditure",
+      "class": "government_body",
+      "layer": "decision_allocation_oversight",
+      "description": "Frames expenditure rules and fund release controls."
+    },
+    {
+      "id": "gov_line_ministries",
+      "label": "Line Ministries",
+      "class": "government_body",
+      "layer": "decision_allocation_oversight",
+      "description": "Own schemes and release central shares where applicable."
+    },
+    {
+      "id": "gov_cag",
+      "label": "CAG",
+      "class": "government_body",
+      "layer": "decision_allocation_oversight",
+      "description": "Audits and reports on public finance and government accounts."
+    },
+    {
+      "id": "gov_pac",
+      "label": "PAC",
+      "class": "government_body",
+      "layer": "decision_allocation_oversight",
+      "description": "Parliamentary public accounts scrutiny."
+    },
+    {
+      "id": "fund_cfi",
+      "label": "Consolidated Fund of India",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "Origin point for Union government money in this simplified model."
+    },
+    {
+      "id": "fund_scheme_budget_head",
+      "label": "Central Scheme Budget Head",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "Budget head under the relevant line ministry."
+    },
+    {
+      "id": "fund_sna",
+      "label": "State Single Nodal Agency Account",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "One account per centrally sponsored scheme per state, subject to scheme rules."
+    },
+    {
+      "id": "fund_implementing_agency",
+      "label": "Implementing Agencies",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "District, block, local body, or department units that execute scheme activity."
+    },
+    {
+      "id": "fund_ddo",
+      "label": "DRDA / Line Department DDOs",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "Drawing and disbursing officers or equivalent authorities issuing payment instructions."
+    },
+    {
+      "id": "fund_pfms_payment_rail",
+      "label": "Payment Rail - PFMS",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "Electronic transfer instruction and reconciliation layer."
+    },
+    {
+      "id": "fund_beneficiary_account",
+      "label": "Beneficiary Bank Account",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "Recipient account for individual benefit transfers."
+    },
+    {
+      "id": "fund_vendor_account",
+      "label": "Vendor / Contractor Account",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "Recipient account for works, goods, services, and procurement payments."
+    },
+    {
+      "id": "recipient_citizen",
+      "label": "Recipient - Citizen",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "Citizen or household receiving wages, pensions, scholarships, or DBT benefits."
+    },
+    {
+      "id": "recipient_goods_services",
+      "label": "Recipient - Works / Goods / Services",
+      "class": "custodial_fund_tier",
+      "layer": "money_spine",
+      "description": "Public value delivered through vendor or contractor channel."
+    },
+    {
+      "id": "sys_pfms",
+      "label": "PFMS",
+      "class": "digital_system",
+      "layer": "digital_rails",
+      "description": "Public Financial Management System for allocations, releases, expenditure, payment, reconciliation, and reporting."
+    },
+    {
+      "id": "sys_sna_sparsh",
+      "label": "SNA / SNA-SPARSH",
+      "class": "digital_system",
+      "layer": "digital_rails",
+      "description": "SNA cash module and just-in-time release workflow for centrally sponsored schemes."
+    },
+    {
+      "id": "sys_tsa",
+      "label": "TSA",
+      "class": "digital_system",
+      "layer": "digital_rails",
+      "description": "Treasury Single Account model for central-sector funds."
+    },
+    {
+      "id": "sys_dbt_bharat",
+      "label": "DBT Bharat",
+      "class": "digital_system",
+      "layer": "digital_rails",
+      "description": "Policy and MIS layer for direct benefit transfers."
+    },
+    {
+      "id": "sys_aadhaar_apb",
+      "label": "Aadhaar Payment Bridge",
+      "class": "digital_system",
+      "layer": "digital_rails",
+      "description": "Aadhaar-to-bank account routing context for bulk credits."
+    },
+    {
+      "id": "sys_scheme_mis",
+      "label": "Scheme MIS Systems",
+      "class": "digital_system",
+      "layer": "digital_rails",
+      "description": "Scheme-specific systems carrying beneficiary, work, sanction, and payment data."
+    },
+    {
+      "id": "sys_gem",
+      "label": "GeM",
+      "class": "digital_system",
+      "layer": "digital_rails",
+      "description": "Government e-Marketplace procurement platform."
+    },
+    {
+      "id": "sys_eproc",
+      "label": "CPPP / State eProcurement",
+      "class": "digital_system",
+      "layer": "digital_rails",
+      "description": "Tender publication and bidding systems."
+    },
+    {
+      "id": "actor_minister_staff",
+      "label": "Ministerial Staff",
+      "class": "influence_actor",
+      "layer": "influence_overlay",
+      "description": "Can influence file and tender movement without holding cash custody."
+    },
+    {
+      "id": "actor_district_collector",
+      "label": "District Magistrate / Collector",
+      "class": "influence_actor",
+      "layer": "influence_overlay",
+      "description": "Influences district planning, estimates, utilization, and convergence."
+    },
+    {
+      "id": "actor_bdo_patwari",
+      "label": "BDO / Tehsildar / Patwari",
+      "class": "influence_actor",
+      "layer": "influence_overlay",
+      "description": "Can affect beneficiary eligibility, measurements, and local verification."
+    },
+    {
+      "id": "actor_engineer_work_inspector",
+      "label": "Junior Engineer / Work Inspector",
+      "class": "influence_actor",
+      "layer": "influence_overlay",
+      "description": "Produces measurement and quality evidence for works."
+    },
+    {
+      "id": "actor_executive_engineer",
+      "label": "Executive Engineer",
+      "class": "influence_actor",
+      "layer": "influence_overlay",
+      "description": "Clears technical bills, supervises works execution, and signs off on contractor payment stages."
+    },
+    {
+      "id": "actor_tender_committee",
+      "label": "Tender Committee Members",
+      "class": "influence_actor",
+      "layer": "influence_overlay",
+      "description": "Influence technical and financial qualification of vendors."
+    },
+    {
+      "id": "data_pfms_reports",
+      "label": "PFMS Reports",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Expenditure, transactions, treasury, and reconciliation reports."
+    },
+    {
+      "id": "data_cag_reports",
+      "label": "CAG Reports",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Audit paragraphs, compliance reports, and performance audit reports."
+    },
+    {
+      "id": "data_scheme_public",
+      "label": "Scheme Public Data",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Public MIS data such as works, muster rolls, sanctions, beneficiaries, and payments."
+    },
+    {
+      "id": "data_gem_tender",
+      "label": "GeM / Tender Data",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Orders, values, vendors, notices, bids, contracts, and procurement metadata."
+    },
+    {
+      "id": "data_dpr_estimates",
+      "label": "DPR / Cost Estimate",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Detailed Project Report, schedule of rates, technical sanction, and itemized cost estimate for works."
+    },
+    {
+      "id": "data_running_account_bills",
+      "label": "Running Account Bills",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Milestone bills, mobilization advances, contractor invoices, and bill clearance records."
+    },
+    {
+      "id": "data_measurement_books",
+      "label": "Measurement Books",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Field measurement records for quantities, stages, and work completion."
+    },
+    {
+      "id": "data_physical_evidence",
+      "label": "Physical Delivery Evidence",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Geo-tags, inspection reports, citizen photos, satellite checks, quality tests, and failure records."
+    },
+    {
+      "id": "data_grievance_rti_social_audit",
+      "label": "RTI / Grievance / Social Audit",
+      "class": "dataset",
+      "layer": "evidence_exhaust",
+      "description": "Findings, grievances, appeals, replies, and public oversight records."
+    },
+    {
+      "id": "oversight_cag_pac",
+      "label": "CAG Audit -> PAC Scrutiny",
+      "class": "oversight_path",
+      "layer": "oversight_escalation",
+      "description": "Audit and parliamentary scrutiny path."
+    },
+    {
+      "id": "oversight_rti",
+      "label": "RTI -> Appeal -> CIC/SIC",
+      "class": "oversight_path",
+      "layer": "oversight_escalation",
+      "description": "Right to information request and appeal path."
+    },
+    {
+      "id": "oversight_grievance",
+      "label": "Grievance Portals",
+      "class": "oversight_path",
+      "layer": "oversight_escalation",
+      "description": "CPGRAMS and state grievance routes."
+    },
+    {
+      "id": "oversight_social_audit",
+      "label": "Social Audit -> Gram Sabha",
+      "class": "oversight_path",
+      "layer": "oversight_escalation",
+      "description": "Community verification and social audit path."
+    }
+  ]
+}

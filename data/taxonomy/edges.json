@@ -1,0 +1,231 @@
+{
+  "version": "0.1.0",
+  "last_reviewed": "2026-06-10",
+  "edges": [
+    {
+      "id": "e_budget_authorization",
+      "from": "gov_parliament_lok_sabha",
+      "to": "gov_mof_budget_division",
+      "type": "decision",
+      "label": "approves budget",
+      "expected_evidence": ["budget_documents", "demands_for_grants"],
+      "risk_markers": ["R1"]
+    },
+    {
+      "id": "e_expenditure_rules",
+      "from": "gov_mof_doe",
+      "to": "gov_line_ministries",
+      "type": "decision",
+      "label": "sanctions and expenditure rules",
+      "expected_evidence": ["financial_rules", "release_guidelines", "sanction_orders"],
+      "risk_markers": ["R1", "R2"]
+    },
+    {
+      "id": "e_line_ministry_to_cfi",
+      "from": "gov_line_ministries",
+      "to": "fund_cfi",
+      "type": "decision",
+      "label": "scheme ownership and central share",
+      "expected_evidence": ["scheme_guidelines", "budget_head_mapping"],
+      "risk_markers": ["R1"]
+    },
+    {
+      "id": "e_cfi_to_budget_head",
+      "from": "fund_cfi",
+      "to": "fund_scheme_budget_head",
+      "type": "money",
+      "label": "appropriated allocation",
+      "expected_evidence": ["head_of_account", "budget_allocation"],
+      "risk_markers": ["R1", "R7"]
+    },
+    {
+      "id": "e_budget_head_to_sna",
+      "from": "fund_scheme_budget_head",
+      "to": "fund_sna",
+      "type": "money",
+      "label": "release to SNA",
+      "expected_evidence": ["release_order", "pfms_sanction", "sna_account_statement"],
+      "risk_markers": ["R2", "R7"]
+    },
+    {
+      "id": "e_sna_to_implementing_agency",
+      "from": "fund_sna",
+      "to": "fund_implementing_agency",
+      "type": "money",
+      "label": "implementation authorization",
+      "expected_evidence": ["implementation_plan", "agency_mapping", "state_ifms_entry"],
+      "risk_markers": ["R2", "R3", "R7"]
+    },
+    {
+      "id": "e_implementing_agency_to_ddo",
+      "from": "fund_implementing_agency",
+      "to": "fund_ddo",
+      "type": "money",
+      "label": "payment authority prepares instruction",
+      "expected_evidence": ["work_order", "beneficiary_list", "invoice", "measurement_book"],
+      "risk_markers": ["R3", "R4"]
+    },
+    {
+      "id": "e_ddo_to_pfms",
+      "from": "fund_ddo",
+      "to": "fund_pfms_payment_rail",
+      "type": "money",
+      "label": "electronic payment instruction",
+      "expected_evidence": ["payment_file", "digital_signature", "pfms_transaction_id"],
+      "risk_markers": ["R5", "R7"]
+    },
+    {
+      "id": "e_pfms_to_beneficiary_account",
+      "from": "fund_pfms_payment_rail",
+      "to": "fund_beneficiary_account",
+      "type": "money",
+      "label": "beneficiary credit path",
+      "expected_evidence": ["bank_credit_status", "apb_or_account_response", "return_code"],
+      "risk_markers": ["R5"]
+    },
+    {
+      "id": "e_pfms_to_vendor_account",
+      "from": "fund_pfms_payment_rail",
+      "to": "fund_vendor_account",
+      "type": "money",
+      "label": "vendor / contractor payment path",
+      "expected_evidence": ["invoice", "contract", "completion_or_supply_record", "payment_status"],
+      "risk_markers": ["R4", "R5"]
+    },
+    {
+      "id": "e_beneficiary_to_citizen",
+      "from": "fund_beneficiary_account",
+      "to": "recipient_citizen",
+      "type": "delivery",
+      "label": "cash benefit received",
+      "expected_evidence": ["beneficiary_status", "bank_credit", "citizen_confirmation"],
+      "risk_markers": ["R5", "R6"]
+    },
+    {
+      "id": "e_vendor_to_delivery",
+      "from": "fund_vendor_account",
+      "to": "recipient_goods_services",
+      "type": "delivery",
+      "label": "works / goods / services delivered",
+      "expected_evidence": ["geo_tag", "measurement_book", "inspection_report", "citizen_feedback"],
+      "risk_markers": ["R4", "R6", "R7"]
+    },
+    {
+      "id": "e_pfms_system_evidence",
+      "from": "sys_pfms",
+      "to": "data_pfms_reports",
+      "type": "evidence",
+      "label": "produces payment and expenditure reports",
+      "expected_evidence": ["pfms_report"],
+      "risk_markers": ["R7"]
+    },
+    {
+      "id": "e_scheme_mis_evidence",
+      "from": "sys_scheme_mis",
+      "to": "data_scheme_public",
+      "type": "evidence",
+      "label": "produces scheme public data",
+      "expected_evidence": ["public_mis_export"],
+      "risk_markers": ["R3", "R4", "R7"]
+    },
+    {
+      "id": "e_procurement_evidence",
+      "from": "sys_gem",
+      "to": "data_gem_tender",
+      "type": "evidence",
+      "label": "produces procurement metadata",
+      "expected_evidence": ["orders", "vendors", "contract_values"],
+      "risk_markers": ["R4", "R7"]
+    },
+    {
+      "id": "e_eproc_evidence",
+      "from": "sys_eproc",
+      "to": "data_gem_tender",
+      "type": "evidence",
+      "label": "produces tender metadata",
+      "expected_evidence": ["notices", "bids", "award_records"],
+      "risk_markers": ["R4", "R7"]
+    },
+    {
+      "id": "e_implementing_agency_to_dpr",
+      "from": "fund_implementing_agency",
+      "to": "data_dpr_estimates",
+      "type": "evidence",
+      "label": "produces DPR and cost estimate",
+      "expected_evidence": ["dpr", "technical_sanction", "schedule_of_rates", "cost_estimate"],
+      "risk_markers": ["R4", "R7"]
+    },
+    {
+      "id": "e_tender_committee_to_tender_data",
+      "from": "actor_tender_committee",
+      "to": "data_gem_tender",
+      "type": "evidence",
+      "label": "creates tender evaluation trail",
+      "expected_evidence": ["comparative_statement", "technical_evaluation", "financial_bid", "award_note"],
+      "risk_markers": ["R4"]
+    },
+    {
+      "id": "e_engineer_to_measurement_books",
+      "from": "actor_engineer_work_inspector",
+      "to": "data_measurement_books",
+      "type": "evidence",
+      "label": "records field measurements",
+      "expected_evidence": ["measurement_book", "quantity_record", "stage_completion_note"],
+      "risk_markers": ["R4", "R7"]
+    },
+    {
+      "id": "e_executive_engineer_to_bills",
+      "from": "actor_executive_engineer",
+      "to": "data_running_account_bills",
+      "type": "evidence",
+      "label": "clears running account bills",
+      "expected_evidence": ["running_account_bill", "mobilization_advance", "bill_clearance", "contractor_invoice"],
+      "risk_markers": ["R4", "R5"]
+    },
+    {
+      "id": "e_delivery_to_physical_evidence",
+      "from": "recipient_goods_services",
+      "to": "data_physical_evidence",
+      "type": "evidence",
+      "label": "grounds physical delivery truth",
+      "expected_evidence": ["geo_tag", "inspection_report", "citizen_photo", "satellite_check", "quality_test"],
+      "risk_markers": ["R4", "R6", "R7"]
+    },
+    {
+      "id": "e_cag_reports",
+      "from": "gov_cag",
+      "to": "data_cag_reports",
+      "type": "oversight",
+      "label": "audit findings",
+      "expected_evidence": ["audit_para", "performance_audit", "compliance_audit"],
+      "risk_markers": ["R6"]
+    },
+    {
+      "id": "e_cag_to_pac",
+      "from": "gov_cag",
+      "to": "gov_pac",
+      "type": "oversight",
+      "label": "audit and scrutiny",
+      "expected_evidence": ["audit_report", "action_taken_note"],
+      "risk_markers": ["R6"]
+    },
+    {
+      "id": "e_grievance_to_evidence",
+      "from": "oversight_grievance",
+      "to": "data_grievance_rti_social_audit",
+      "type": "oversight",
+      "label": "grievance trail",
+      "expected_evidence": ["grievance_id", "response", "closure_reason"],
+      "risk_markers": ["R6", "R7"]
+    },
+    {
+      "id": "e_social_audit_to_evidence",
+      "from": "oversight_social_audit",
+      "to": "data_grievance_rti_social_audit",
+      "type": "oversight",
+      "label": "social audit trail",
+      "expected_evidence": ["finding", "gram_sabha_record", "action_taken"],
+      "risk_markers": ["R4", "R6"]
+    }
+  ]
+}

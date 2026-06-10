@@ -1,0 +1,157 @@
+{
+  "version": "0.1.0",
+  "last_reviewed": "2026-06-10",
+  "risk_markers": [
+    {
+      "id": "R1",
+      "label": "Policy ambiguity",
+      "description": "Eligibility, unit cost, budget mapping, or authority is unclear enough to create downstream discretion."
+    },
+    {
+      "id": "R2",
+      "label": "Release or float mismatch",
+      "description": "Allocation, release, SNA/TSA/CNA, state IFMS, and expenditure records do not reconcile."
+    },
+    {
+      "id": "R3",
+      "label": "Beneficiary-list gatekeeping",
+      "description": "Local verification, list changes, duplicate records, or exclusion patterns require review."
+    },
+    {
+      "id": "R4",
+      "label": "Works or procurement leakage",
+      "description": "Tender, vendor, measurement, invoice, delivery, or quality records do not reconcile."
+    },
+    {
+      "id": "R5",
+      "label": "Payment or identity failure",
+      "description": "PFMS/APB/bank/payment records show failed, returned, delayed, duplicate, or mismatched credit."
+    },
+    {
+      "id": "R6",
+      "label": "Oversight non-response",
+      "description": "Audit, RTI, grievance, social-audit, vigilance, or court-linked issue lacks timely closure."
+    },
+    {
+      "id": "R7",
+      "label": "Data integrity gap",
+      "description": "Identifiers, dates, locations, amounts, or update windows do not map safely across systems."
+    }
+  ],
+  "signal_types": [
+    {
+      "id": "ALLOCATION_UNMAPPED",
+      "risk_markers": ["R1", "R7"],
+      "default_severity": "medium",
+      "recommended_owner_role": "finance_agent"
+    },
+    {
+      "id": "POLICY_AMBIGUITY",
+      "risk_markers": ["R1"],
+      "default_severity": "medium",
+      "recommended_owner_role": "scheme_agent"
+    },
+    {
+      "id": "RELEASE_EXCEPTION",
+      "risk_markers": ["R2"],
+      "default_severity": "medium",
+      "recommended_owner_role": "finance_agent"
+    },
+    {
+      "id": "FLOAT_OR_PARKING_RISK",
+      "risk_markers": ["R2"],
+      "default_severity": "high",
+      "recommended_owner_role": "finance_agent"
+    },
+    {
+      "id": "ELIGIBILITY_GATEKEEPING",
+      "risk_markers": ["R3"],
+      "default_severity": "medium",
+      "recommended_owner_role": "beneficiary_agent"
+    },
+    {
+      "id": "PROCUREMENT_WORKS_RISK",
+      "risk_markers": ["R4"],
+      "default_severity": "high",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "DPR_COST_OUTLIER",
+      "risk_markers": ["R4", "R7"],
+      "default_severity": "high",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "SINGLE_BID_OR_BID_CLUSTERING",
+      "risk_markers": ["R4"],
+      "default_severity": "high",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "REPEAT_WINNER_CONCENTRATION",
+      "risk_markers": ["R4"],
+      "default_severity": "medium",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "MOBILIZATION_ADVANCE_STALE",
+      "risk_markers": ["R4", "R5"],
+      "default_severity": "medium",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "RUNNING_ACCOUNT_BILL_BEFORE_EVIDENCE",
+      "risk_markers": ["R4", "R5"],
+      "default_severity": "high",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "MEASUREMENT_BOOK_MISMATCH",
+      "risk_markers": ["R4", "R7"],
+      "default_severity": "high",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "QUALITY_DELIVERY_GAP",
+      "risk_markers": ["R4", "R6"],
+      "default_severity": "high",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "PAYMENT_INSTRUCTION_EXCEPTION",
+      "risk_markers": ["R5", "R7"],
+      "default_severity": "medium",
+      "recommended_owner_role": "finance_agent"
+    },
+    {
+      "id": "BENEFICIARY_CREDIT_EXCEPTION",
+      "risk_markers": ["R5"],
+      "default_severity": "medium",
+      "recommended_owner_role": "beneficiary_agent"
+    },
+    {
+      "id": "DELIVERY_RECONCILIATION_GAP",
+      "risk_markers": ["R4", "R7"],
+      "default_severity": "high",
+      "recommended_owner_role": "works_agent"
+    },
+    {
+      "id": "ESCALATION_NON_RESPONSE",
+      "risk_markers": ["R6"],
+      "default_severity": "medium",
+      "recommended_owner_role": "grievance_agent"
+    },
+    {
+      "id": "DATA_FRESHNESS_GAP",
+      "risk_markers": ["R7"],
+      "default_severity": "low",
+      "recommended_owner_role": "data_steward_agent"
+    },
+    {
+      "id": "IDENTIFIER_COLLISION",
+      "risk_markers": ["R7"],
+      "default_severity": "medium",
+      "recommended_owner_role": "data_steward_agent"
+    }
+  ]
+}
