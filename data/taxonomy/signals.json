@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "last_reviewed": "2026-06-10",
+  "version": "0.2.0",
+  "last_reviewed": "2026-06-11",
   "risk_markers": [
     {
       "id": "R1",
@@ -152,6 +152,42 @@
       "risk_markers": ["R7"],
       "default_severity": "medium",
       "recommended_owner_role": "data_steward_agent"
+    },
+    {
+      "id": "CITIZEN_STATUS_OPACITY",
+      "risk_markers": ["R6", "R7"],
+      "default_severity": "low",
+      "recommended_owner_role": "citizen_comms_agent"
+    },
+    {
+      "id": "FILE_PENDENCY_BREACH",
+      "risk_markers": ["R6"],
+      "default_severity": "high",
+      "recommended_owner_role": "file_flow_agent"
+    },
+    {
+      "id": "REDUNDANT_APPROVAL_STEP",
+      "risk_markers": ["R1"],
+      "default_severity": "low",
+      "recommended_owner_role": "noting_sanction_agent"
+    },
+    {
+      "id": "REPEAT_DOCUMENT_DEMAND",
+      "risk_markers": ["R7", "R1"],
+      "default_severity": "low",
+      "recommended_owner_role": "certificate_agent"
+    },
+    {
+      "id": "COMPLAINT_NON_REGISTRATION",
+      "risk_markers": ["R6"],
+      "default_severity": "high",
+      "recommended_owner_role": "police_complaint_agent"
+    },
+    {
+      "id": "STATUTORY_TIMELINE_BREACH",
+      "risk_markers": ["R6"],
+      "default_severity": "high",
+      "recommended_owner_role": "investigation_agent"
     }
   ]
 }
