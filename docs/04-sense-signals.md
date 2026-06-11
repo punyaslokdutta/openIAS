@@ -91,6 +91,21 @@ The first public narrative should focus on a bridge because it makes the contrac
 | `MEASUREMENT_BOOK_MISMATCH` | R4 | Paid quantities do not match measurement evidence or physical progress |
 | `QUALITY_DELIVERY_GAP` | R4/R6 | The delivered bridge, road, or structure appears weaker or less complete than the paid specification |
 
+## Service and Process Signals (kagaz raj)
+
+These signals do not detect leakage; they detect friction. They power the citizen-facing
+and paperwork-efficiency agents whose job is to make the flow of paperwork faster and the
+state legible to the public.
+
+| Signal Type | Risk | Plain-English Meaning |
+| --- | --- | --- |
+| `CITIZEN_STATUS_OPACITY` | R6/R7 | A citizen cannot get the status of their own application, payment, or work from any system |
+| `FILE_PENDENCY_BREACH` | R6 | A file or approval is stuck on a desk beyond its statutory or citizen-charter timeline |
+| `REDUNDANT_APPROVAL_STEP` | R1 | An approval hop adds delay without a clear legal or financial-delegation basis |
+| `REPEAT_DOCUMENT_DEMAND` | R7/R1 | A citizen is asked to furnish a record the state already holds and could verify itself |
+| `COMPLAINT_NON_REGISTRATION` | R6 | A complaint or FIR that appears registrable has not been registered or acknowledged |
+| `STATUTORY_TIMELINE_BREACH` | R6 | A case, charge-sheet, or redress action is approaching or past a statutory deadline |
+
 ## Severity
 
 Severity should combine impact, confidence, sensitivity, and response deadline.

@@ -60,17 +60,52 @@ These are the skills the PTL-384 bridge demo actually exercises.
 | Audit Agent | `exception-bundle-builder` | all (bundling) |
 | Audit Agent | `audit-para-tracker` | `ESCALATION_NON_RESPONSE` |
 
-## Phase 2 — remaining roster (documented, not yet built)
+## Phase 2 — GTM officer & citizen roster (flagship skills built)
+
+This roster faces the people the platform must win — IAS and IPS officers — and their need
+to communicate with the masses and dismantle **kagaz raj** (the rule of paper). Each agent
+below ships with its flagship skill; further skills per agent are the next increment.
+
+### Mass-facing — talk to the public
+
+| Owner | Folder | Flagship skill | Primary signal |
+| --- | --- | --- | --- |
+| Citizen Comms Agent (Jan Samvad) | `citizen-comms-agent` | `plain-language-status-explainer` | `CITIZEN_STATUS_OPACITY` |
+| Grievance Agent (Shikayat) | `grievance-agent` | `grievance-evidence-linking` | `ESCALATION_NON_RESPONSE` |
+| Beneficiary Agent (Haq) | `beneficiary-agent` | `benefit-status-explainer` | `ELIGIBILITY_GATEKEEPING` |
+
+### Kagaz-raj killers — make files flow
+
+| Owner | Folder | Flagship skill | Primary signal |
+| --- | --- | --- | --- |
+| File-Flow Agent (Faayl) | `file-flow-agent` | `stuck-file-tracking` | `FILE_PENDENCY_BREACH` |
+| Noting & Sanction Agent | `noting-sanction-agent` | `noting-and-sanction-drafting` | `REDUNDANT_APPROVAL_STEP` |
+| Certificate Agent (Pramaan) | `certificate-agent` | `certificate-issuance-verification` | `REPEAT_DOCUMENT_DEMAND` |
+| RTI / Transparency Agent | `rti-agent` | `rti-request-drafting` | `ESCALATION_NON_RESPONSE` |
+
+### IAS desk — district administration
+
+| Owner | Folder | Flagship skill | Primary signal |
+| --- | --- | --- | --- |
+| District Collector Agent | `district-collector-agent` | `district-accountability-brief` | all |
+| Scheme Convergence Agent | `scheme-convergence-agent` | `scheme-data-reconciliation` | `RELEASE_EXCEPTION` |
+
+### IPS desk — law, order & trust
+
+| Owner | Folder | Flagship skill | Primary signal |
+| --- | --- | --- | --- |
+| Police Complaint Agent (FIR) | `police-complaint-agent` | `fir-intake-and-tracking` | `COMPLAINT_NON_REGISTRATION` |
+| Public Safety Comms Agent | `public-safety-comms-agent` | `public-advisory-and-rumor-rebuttal` | `ESCALATION_NON_RESPONSE` |
+| Investigation Agent | `investigation-agent` | `charge-sheet-evidence-assembly` | `STATUTORY_TIMELINE_BREACH` |
+
+> GTM pivot: the **IPS / law-and-order** angle is now a first-class set of agents (intake,
+> public safety, investigation), superseding the earlier plan to fold it into Grievance and
+> Audit. Officer adoption and mass communication are the wedge; the evidence spine above
+> still supplies every fact these agents use, and every outward action keeps its approval gate.
+
+## Phase 3 — still planned (not yet built)
 
 | Owner | Real office | Planned skills |
 | --- | --- | --- |
-| Beneficiary Agent | Welfare / citizen-service | `beneficiary-credit-failure-triage`, `eligibility-gatekeeping-review`, `benefit-status-explainer` |
-| Grievance Agent | CPGRAMS / social-audit redress | `grievance-evidence-linking`, `grievance-aging-tracker`, `complainant-protection` (IPS-derived) |
-| RTI Agent | PIO under RTI Act 2005 | `rti-request-drafting`, `rti-response-analysis`, `proactive-disclosure-check` |
-| District Collector Agent | District administration (IAS) | `district-accountability-brief`, `case-room-orchestration` |
 | BDO Agent | Block development (rural) | `beneficiary-list-verification`, `work-status-field-check` |
 | Chief Secretary Agent | State administration head (IAS) | `state-level-rollup`, `policy-ambiguity-review` |
-
-The **IPS / law-and-order** angle is folded in rather than given its own agent:
-`complainant-protection` lives under Grievance, and vigilance/Lokayukta/CVC referral
-is handled inside Audit's `exception-bundle-builder` and `audit-para-tracker`.
