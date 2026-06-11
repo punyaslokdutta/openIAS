@@ -101,7 +101,7 @@ Build:
 
 Integrate or adapt:
 
-- Agent orchestration pattern from Paperclip-like systems.
-- Slack-style team workflow pattern from Guildly-like systems.
+- Agent orchestration patterns from modern multi-agent systems.
+- Slack-style team workflow patterns from collaborative workspace tools.
 - Visualization libraries such as D3.
 - Existing government/public datasets rather than scraping private records.

@@ -1,8 +1,8 @@
 # Civil Services Agent Workspace
 
-This doc translates the Guildly-style screenshots into a PaperTrail workspace interface.
+This doc translates the reference workspace screenshots into a PaperTrail workspace interface.
 
-The product pattern is: build a government accountability team the way Guildly builds a company of AI employees. The interface should feel like a Slack workspace with role-bound civil-services agents, tickets, PRDs, docs, signal intake, threads, approvals, and a live activity workshop.
+The product pattern is: build a government accountability team the way modern agent platforms build a company of AI employees. The interface should feel like a Slack workspace with role-bound civil-services agents, tickets, PRDs, docs, signal intake, threads, approvals, and a live activity workshop.
 
 ## Interface Shape
 

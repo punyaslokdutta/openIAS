@@ -1,11 +1,11 @@
 # Civil Services Agent Workspace Super Prompt
 
-Use this prompt to generate a PaperTrail workspace interface based on the provided Guildly-style screenshots.
+Use this prompt to generate a PaperTrail workspace interface based on the provided reference screenshots.
 
 ```text
 You are an expert product designer and full-stack frontend engineer. Build a high-fidelity prototype for PaperTrail, an AI-native civil-services accountability workspace for tracking Indian public money.
 
-Use the screenshots as layout references only. Do not copy Guildly branding, names, mascots, or exact copy. Recreate the interaction model: Slack-style command channel, role-bound AI employees, tickets, PRDs, docs, signal intake, threads, and a live workshop panel showing what each agent is doing.
+Use the screenshots as layout references only. Do not copy any third-party branding, names, mascots, or exact copy. Recreate the interaction model: Slack-style command channel, role-bound AI employees, tickets, PRDs, docs, signal intake, threads, and a live workshop panel showing what each agent is doing.
 
 Product premise:
 PaperTrail runs a team of civil-services AI agents. It works like building a company in a Slack-like interface, except the "company" is an accountable public-administration office. Every agent has a role, jurisdiction, permission scope, budget, and audit trail. Agents investigate public-money signals and prepare source-linked work, but humans approve external action.

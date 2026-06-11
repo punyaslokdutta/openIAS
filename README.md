@@ -77,7 +77,7 @@ The 2026 product thesis:
 - DBT reduced many last-mile cash leakages in direct-benefit flows.
 - The harder leakage and accountability gaps often sit upstream: eligibility gatekeeping, fund release delays, works measurement, procurement, vendor billing, data mismatch, and weak escalation loops.
 - AI agents are useful only if they are constrained by evidence, permissions, audit logs, and human approval gates.
-- The workspace should feel like a government-grade Guildly/Paperclip pattern: channels, tickets, PRDs, approvals, budgets, agent heartbeats, and immutable receipts, but adapted to public administration rather than software teams.
+- The workspace should feel like a government-grade agent-coordination pattern: channels, tickets, PRDs, approvals, budgets, agent heartbeats, and immutable receipts, but adapted to public administration rather than software teams.
 
 ## Repository Map
 
@@ -139,7 +139,7 @@ The 2026 product thesis:
 
 ## Inspirations
 
-The product borrows interface and operating-system ideas from agent coordination tools such as Paperclip and Guildly, but the domain model is grounded in Indian public administration, public finance, and auditability. openIAS is not affiliated with those projects.
+The product borrows interface and operating-system ideas from modern agent-coordination tools, but the domain model is grounded in Indian public administration, public finance, and auditability. openIAS is not affiliated with any such product.
 
 ## Current Status
 
