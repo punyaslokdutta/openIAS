@@ -42,13 +42,6 @@ This file is a starting source map, not a complete bibliography. Prefer official
 | Social audit | Scheme/state-specific | Especially relevant for schemes with mandated social audit. |
 | Lokayukta/Vigilance/CVC | Institution-specific | Oversight and anti-corruption escalation pathways vary by jurisdiction and matter. |
 
-## Product Inspiration References
-
-| Reference | Source | What to borrow carefully |
-| --- | --- | --- |
-| Paperclip | https://github.com/paperclipai/paperclip | Agent org charts, tickets, governance, budgets, heartbeats, and audit logs. |
-| Guildly | https://www.tryguildly.com/ | Slack-style channels, PRDs, tickets, approvals, worktree-like isolation patterns, and searchable team memory. |
-
 ## Source Hygiene
 
 - Add access date for volatile pages.
